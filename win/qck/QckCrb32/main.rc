@@ -1,0 +1,48 @@
+#include "windres.h"
+#include "quickWin.rc"
+#include "accelerators.rc"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 3, 5, 15, 1
+PRODUCTVERSION 3, 5, 15, 1
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+	FILEFLAGS VS_FF_DEBUG
+#else
+	FILEFLAGS 0x0L
+#endif
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_APP
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "040904B0"
+		BEGIN
+			VALUE "LegalCopyright", "Copyright © 1998-2015 by Wesley Steiner\000"
+			VALUE "CompanyName", "Wesley Steiner\000"
+			VALUE "FileVersion", "3.5.15.1\000"
+			VALUE "ProductVersion", "3.5.15.1\000"
+			VALUE "FileDescription", "Quick Cribbage Application\000"
+			VALUE "InternalName", "Quick Cribbage\000"
+			VALUE "OriginalFilename", "QuickCribbage.exe\000"
+			VALUE "ProductName", "Quick Cribbage for Windows\000"
+		END
+
+	END
+
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 1033, 1200
+	END
+
+END
+
+BOARD                   BITMAP  MOVEABLE PURE   "res\\board.bmp"
+PEGHOLE            		BITMAP  MOVEABLE PURE   "res\\peghole.bmp"
+794                     BITMAP  MOVEABLE PURE   "res\\bmp794.bmp"
+795                     BITMAP  MOVEABLE PURE   "res\\bmp795.bmp"
+798                     BITMAP  MOVEABLE PURE   "res\\bmp798.bmp"
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+MAINICON ICON DISCARDABLE "res\\main.ICO"
